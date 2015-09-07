@@ -11,7 +11,6 @@ def create_perm(app, created_models, verbosity, db, **kwargs):
 
     if ContentType._meta.installed and Permission._meta.installed:
         content_type, created = ContentType.objects.get_or_create(
-            name='config',
             app_label='constance',
             model='config')
 
